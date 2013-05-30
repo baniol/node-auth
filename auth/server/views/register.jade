@@ -1,0 +1,43 @@
+
+extends layout
+
+block content
+	// preset form values if we receive a userdata object //
+	- user = typeof(udata) != 'undefined' ? udata : { }
+	// store the userId on the client side in a hidden input field //
+	input(type='hidden', value= user._id)#userId
+
+	#container
+		form( method="post")#register-form.form-register
+			h3
+				p#sub1.subheading Register yourself
+
+			#reg-alert.alert.alert-error.hidden
+				//- button.close(data-dismiss="alert") &times;
+				strong
+
+			//- hr
+			fieldset
+				p#sub2.subheading
+				#email-cg.control-group
+					label.control-label(for='user-tf') Email
+					.controls
+						input#user-tf(type='email', name='email', value= user.email)
+						span.help-inline
+				#password-cg.control-group
+					label.control-label(for='pass-tf') Password
+					.controls
+						input#pass-tf(type='password', name='password', value='')
+						span.help-inline
+				#confirm-cg.control-group
+					label.control-label(for='pass-conf') Retype password
+					.controls
+						input#pass-conf(type='password', name='password-confirm', value='')
+						span.help-inline
+				.control-group
+					//- button(type='button')#register.btn
+					button(type='submit')#register-submit.btn.btn-primary Register
+
+block scripts
+	script(src='/js/register.js')
+	//- script(src='/js/bootstrap-alerts.js')

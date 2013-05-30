@@ -1,0 +1,25 @@
+{
+"name": "node-auth",
+"version": "0.0.1",
+"description": "Universal login system on top of nodejs & mysql",
+"author":
+{
+	"name": "Marcin Baniowski",
+	"email": "marcin@baniowski.pl"
+},
+"main":"./index.js",
+"private": true,
+"dependencies":
+{
+	"express": "3.0.6",
+	"less-middleware": "*",
+	"bootstrap": "git+https://github.com/twitter/bootstrap.git",
+	"jade": "*",
+	"sequelize": "*",
+	"mysql":"*",
+	"moment": "*",
+	"nodemailer": "0.3.37",
+	"validator": "0.4.22",
+	"express-validator": "0.3.1"
+}
+}
