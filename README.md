@@ -1,18 +1,14 @@
-# Node authorization system
+## Node authorization system
 
 ### Node & mysql + jade & less
 
-Some ideas are taken from (https://github.com/braitsch/node-login)[https://github.com/braitsch/node-login]
-
-> (not suitable for production puroposes !)
+(Some of the ideas are taken from https://github.com/braitsch/node-login).
 
 ---
 
 ## Description
 
-This is merely a draft of the node & mysql authorization system.
-
-It hasn`t been extensively tested.
+This is merely a draft of the node & mysql authorization system, therefore it`s not suitable for production.
 
 
 ## Installation
@@ -21,4 +17,6 @@ It hasn`t been extensively tested.
 
 2. edit ``auth/config.js`` and provide your database details,
 
-3. run ``node index.js --install`` in the projects root directory. This will create user table with a test user: test@test.com, password: test_user
+3. run ``node index.js --install`` in the projects root directory. This will create user table with a test user: 
+
+	``test@test.com, password: test_user``
